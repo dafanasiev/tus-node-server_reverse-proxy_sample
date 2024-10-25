@@ -9,9 +9,9 @@ sequenceDiagram
     Client->>Reverse Proxy: request port 3001
     Reverse Proxy->>Tus Server: request port 3000
     activate Tus Server
-    Tus Server-->>Reverse Proxy: response data
+    Tus Server-->>Reverse Proxy: response data (with port 3001 in response body)
     deactivate Tus Server
-    Reverse Proxy-->>Client: response data
+    Reverse Proxy-->>Client: response data (bypass body)
 ```
 
 # Startup
