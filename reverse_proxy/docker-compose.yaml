@@ -1,0 +1,7 @@
+services:
+  nginx:
+    image: nginx:1.27.2
+    container_name: nginx
+    network_mode: host
+    volumes:
+      - ./default.conf:/etc/nginx/conf.d/default.conf:ro
